@@ -1,10 +1,13 @@
 # PXGroupTen
 
-# Team members:
+# Contributors
+## Team members:
 - Kenric Nguyen
 - MD Atikul Islam
 - Shuo Yang
 - Timothy Sultana
+## Data Science & Visualisation Ninja
+- Mr. Andrew Leahy : offer code reviews and a lot of tips and tricks on how to improve the codes
 
 # Installation guide for 360 Stereo Time-lapse Video
 
@@ -12,10 +15,10 @@ The project package will be available in /home/pi folder in the raspberry pi
 
 Before running the package, user must make some changes to node_modules if user is not using the existing modules.
 Changes are given bellow
-	1. Add extra [.set('Host', '192.168.1.1')] header in node_modules/osc-client/lib/makeHttpRequest.js under requestMethod(url) and node_modules/osc-client/lib/commandsExecute.js under request.post(commandsExecuteUrl)
-	2.	Add two functions to use oscClient for startCapture and stopCapture in node_modules/osc-client/lib/OscClient.js
-	functions are:
-
+1- Add extra [.set('Host', '192.168.1.1')] header in node_modules/osc-client/lib/makeHttpRequest.js under requestMethod(url) and node_modules/osc-client/lib/commandsExecute.js under request.post(commandsExecuteUrl)
+2- Add two functions to use oscClient for startCapture and stopCapture in node_modules/osc-client/lib/OscClient.js
+3- The functions are:
+	
 	//camera._startCapture
 	this.startCapture = function(sessionId, statusCallback) {
         return commandsExecute.apply(this, ['camera._startCapture', { sessionId: sessionId }, statusCallback]);
