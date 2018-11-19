@@ -6,14 +6,14 @@
 - Shuo Yang
 - Timothy Sultana
 
-Installation guide for 360 Stereo Time-lapse Video
+# Installation guide for 360 Stereo Time-lapse Video
 
-#The project package will be available in /home/pi folder in the raspberry pi
+The project package will be available in /home/pi folder in the raspberry pi
 
 Before running the package, user must make some changes to node_modules if user is not using the existing modules.
 Changes are given bellow
-1. Add extra [.set('Host', '192.168.1.1')] header in node_modules/osc-client/lib/makeHttpRequest.js under requestMethod(url) and node_modules/osc-client/lib/commandsExecute.js under request.post(commandsExecuteUrl)
-2.	Add two functions to use oscClient for startCapture and stopCapture in node_modules/osc-client/lib/OscClient.js
+	1. Add extra [.set('Host', '192.168.1.1')] header in node_modules/osc-client/lib/makeHttpRequest.js under requestMethod(url) and node_modules/osc-client/lib/commandsExecute.js under request.post(commandsExecuteUrl)
+	2.	Add two functions to use oscClient for startCapture and stopCapture in node_modules/osc-client/lib/OscClient.js
 	functions are:
 
 	//camera._startCapture
@@ -25,7 +25,7 @@ Changes are given bellow
     return commandsExecute.apply(this, ['camera._stopCapture', { sessionId: sessionId }, statusCallback]);
 	};
 
-Steps to run the package with full functionalities.
+## Steps to run the package with full functionalities.
 
 Steps are given bellow.
 Firstly, use putty to connect Raspberry Pi to get Pi terminal.(use Ethernet cable(ip 169.254.203.153) or use router to get wireless connection)
