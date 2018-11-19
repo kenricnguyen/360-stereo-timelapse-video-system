@@ -1,5 +1,11 @@
 # PXGroupTen
 
+# Team members:
+- Kenric Nguyen
+- MD Atikul Islam
+- Shuo Yang
+- Timothy Sultana
+
 Installation guide for 360 Stereo Time-lapse Video
 
 #The project package will be available in /home/pi folder in the raspberry pi
